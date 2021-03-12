@@ -22,19 +22,47 @@ class compression:
 		file_save = input().lower()
 		cf.compress_dir(dir_comp, file_save)
 
-	def entire_dir():
-		pass
 comps = compression
 # Compression starter UI
 def compression_ui():
 	print("Do you want to compress a single file or an entire directory(f/d)")
 	var_search = input().lower()
 	if var_search == "d":
-		pass
+		compression.directory_comp()
 	elif var_search == "f":
 		comps.single_file()
 	else:
 		compression_ui()
+
+# Functions and classes to decompress a file or file
+class decompression:
+	def decomp_file():
+		print("What is the directory of the file that you want to decompress")
+		dir_decomp = input().lower()
+		if dir_decomp.endswith(".lep") != True:
+			print("This is not a LEP")
+			decompression.decomp_file()
+		print("Where do you want to save the outputed file")
+		file_save = input().lower()
+		dcf.decompress_single_file(dir_decomp, file_save)
+	def decomp_dir():
+		print("What is the directory that you want to decompress")
+		print("What is the directory that you want to decompress")
+		dir_decomp = input().lower()
+		print("Where do you want to save the outputed files")
+		file_save = input().lower()
+		dcf.decompress_dir(dir_decomp, file_save)
+decomp = decompression
+# User interface for decompression
+def decomp_ui():
+	print("Do you want to decompress a single file or an entire directory(f/d)")
+	var_search = input().lower()
+	if var_search == "d":
+		decomp.decomp_dir()
+	elif var_search == "f":
+		decomp.decomp_file()
+	else:
+		decomp_ui()
 
 # Main function ran on start
 def main():
@@ -43,7 +71,7 @@ def main():
 	if var_search == "com":
 		compression_ui()
 	elif var_search == "dec":
-		pass
+		decomp_ui()
 	else:
 		main()
 
