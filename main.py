@@ -2,8 +2,6 @@ import compress_files as cf
 import decompress_files as dcf
 import os
 
-
-
 # Functions and classes to compress files
 class compression:
 	def single_file():
@@ -15,6 +13,7 @@ class compression:
 				compression.single_file()
 		print("Where do you want to save the outputed file")
 		file_save = input()
+		cf.compress_single_file(dir_comp, file_save)
 
 	def entire_dir():
 		pass
@@ -29,7 +28,6 @@ def compression_ui():
 		comps.single_file()
 	else:
 		compression_ui()
-
 
 # Main function ran on start
 def main():

@@ -1,3 +1,5 @@
 import os
 def compress_single_file(url, save_url):
-	pass
+	name, exstension = os.path.splitext(url)
+	os.system(f"./lepton/build/lepton {url} {save_url}{name}.lep")
+	
