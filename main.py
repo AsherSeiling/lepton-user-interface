@@ -12,8 +12,15 @@ class compression:
 				print("This is not a JPG")
 				compression.single_file()
 		print("Where do you want to save the outputed file")
-		file_save = input()
+		file_save = input().lower()
 		cf.compress_single_file(dir_comp, file_save)
+	def directory_comp():
+		print("What is the directory that you want to compress")
+		print("What is the directory that you want to compress")
+		dir_comp = input().lower()
+		print("Where do you want to save the outputed files")
+		file_save = input().lower()
+		cf.compress_dir(dir_comp, file_save)
 
 	def entire_dir():
 		pass
