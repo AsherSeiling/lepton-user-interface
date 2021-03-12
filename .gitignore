@@ -1,4 +1,5 @@
 # Ignore mac system files
 .DS_store
 # Ignore Py cache
-__pycache__
+__pycache__/
+.pyc
