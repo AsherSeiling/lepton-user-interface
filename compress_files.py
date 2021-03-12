@@ -1,4 +1,3 @@
 import os
-def compress_single_file(url):
+def compress_single_file(url, save_url):
 	pass
-compress_single_file("img")
