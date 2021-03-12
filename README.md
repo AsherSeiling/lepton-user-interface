@@ -1,7 +1,7 @@
 # lepton-user-interface
 A Mac/linux user interface for dropbox lepton
 
-# Dependancys
+# Dependencies
 ```
 python3
 cmake
