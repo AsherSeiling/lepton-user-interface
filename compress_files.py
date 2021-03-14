@@ -12,9 +12,9 @@ def compress_dir(url, save_folder):
 	compressable_files = []
 	for i in files:
 		if i.lower().endswith(".jpg") == True:
-			compressable_files.append(i)
+			compress_single_file((url + "/" + i), save_folder)
 		elif i.lower().endswith(".jpeg") == True:
-			compressable_files.append(i)
-	for i in compressable_files:
-		compress_single_file((url + i), save_folder)
-	print(len(compressable_files))
+			compress_single_file((url + "/" + i), save_folder)
+		else:
+			os.system("cp -R " + url + "/" + i + " " + save_folder + "/")
+

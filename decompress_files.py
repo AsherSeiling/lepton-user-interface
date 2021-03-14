@@ -13,6 +13,4 @@ def decompress_dir(url, save_folder):
 		if i.lower().endswith(".lep") == True:
 			decompress_single_file((url + "/" + i), save_folder)
 		else:
-			os.system("cp -f ")
-
-decompress_dir("/Users/Asher/Desktop/compressed_jpg", "/Users/Asher/Desktop/decompressed_jpg")
+			os.system("cp -R " + url + "/" + i + " " + save_folder + "/")
