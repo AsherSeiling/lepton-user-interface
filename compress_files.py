@@ -9,12 +9,13 @@ def compress_single_file(url, save_url):
 # Module to compress an antire directory
 def compress_dir(url, save_folder):
 	files = os.listdir(url)
-	compressable_files = []
+	os.system("mkdir " + save_folder + "/noncomp")
 	for i in files:
 		if i.lower().endswith(".jpg") == True:
 			compress_single_file((url + "/" + i), save_folder)
 		elif i.lower().endswith(".jpeg") == True:
 			compress_single_file((url + "/" + i), save_folder)
 		else:
-			os.system("cp -R " + url + "/" + i + " " + save_folder + "/")
+			os.system("cp -R " + url + "/" + i + " " + save_folder + "/noncomp")
 
+compress_dir("/Users/Asher/Desktop/Test", "/Users/Asher/Desktop/Comp_test")

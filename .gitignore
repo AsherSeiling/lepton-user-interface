@@ -1,5 +1,6 @@
 # Ignore mac system files
 .DS_store
+compress_photos.py
 # Ignore Py cache
 __pycache__/
 .pyc
