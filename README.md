@@ -14,5 +14,5 @@ cd dir that lepton-ui is in
 cd lepton-user-interface
 chmod +x init_file.sh
 ./init_file.sh
-python3 main.py
 ```
+Then you use the functions in the python files to compress and decompress JPEGs
